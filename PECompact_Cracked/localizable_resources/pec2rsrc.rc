@@ -1,0 +1,714 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PRIMARYDIALOG DIALOGEX 0, 0, 615, 252
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+MENU IDC_PEC2GUI
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "&Browse for files",IDC_SELECTFILES,7,21,100,15,BS_FLAT
+    PUSHBUTTON      "Se&ttings of selected",IDC_SETTINGS,7,39,100,15,BS_FLAT
+    PUSHBUTTON      "Restore backups",IDC_RESTORE_BACKUP,7,56,100,15,BS_FLAT
+    PUSHBUTTON      "Test selected",IDC_TEST,7,74,100,15,BS_FLAT
+    PUSHBUTTON      "&Compress selected",IDC_START,7,96,100,27,BS_FLAT
+    DEFPUSHBUTTON   "Exit",IDOK,7,201,100,14,BS_FLAT
+    CONTROL         "",IDC_PROGRESS_CURRENT,"msctls_progress32",WS_BORDER,7,219,100,12
+    CONTROL         "",IDC_PROGRESS_TOTAL,"msctls_progress32",WS_BORDER,7,235,100,12
+    CONTROL         148,IDC_STATIC,"Static",SS_BITMAP,7,138,53,9
+    LTEXT           "Static",IDC_REGTEXT,7,185,86,11
+    CONTROL         "",IDC_ADDITIONALINFO,"RichEdit20A",ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | WS_BORDER | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP,114,198,492,48
+    CONTROL         "",IDC_FILESLIST,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,114,7,492,185,WS_EX_ACCEPTFILES
+END
+
+IDD_ABOUTBOX DIALOGEX 22, 17, 279, 222
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 9, "Times New Roman", 400, 0, 0x0
+BEGIN
+    ICON            IDI_ICON1,IDI_ICON1,6,6,20,20
+    DEFPUSHBUTTON   "OK",IDOK,234,204,30,11,WS_GROUP
+    LTEXT           "PECompact - Windows executable compressor",IDC_STATIC,43,8,145,10
+    LTEXT           "Static",IDC_AUTHOR,34,90,223,84
+    GROUPBOX        "Version Information",IDC_STATIC,24,24,239,176
+    CONTROL         148,IDC_STATIC,"Static",SS_BITMAP,212,185,46,8
+    LTEXT           "Static",IDC_VERSIONINFO,36,37,221,47
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_PRIMARYDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 608
+        VERTGUIDE, 7
+        VERTGUIDE, 80
+        VERTGUIDE, 107
+        VERTGUIDE, 251
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 245
+        HORZGUIDE, 158
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        RIGHTMARGIN, 278
+        VERTGUIDE, 26
+        BOTTOMMARGIN, 210
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_APP_TITLE           "PECompact"
+    IDS_COLUMN_FILENAME     "Filename"
+    IDS_COLUMN_OPTIONS      "Options"
+    IDS_COLUMN_FOLDER       "Folder"
+    IDS_COLUMN_ORIGINALSIZE "Original size"
+    IDS_COLUMN_NEWSIZE      "New size"
+    IDC_PEC2GUI             "PECompact"
+    IDS_FILESLV_STATUS_TEXT_1 "Totals"
+    IDS_ABOUTTEXT           "PECompact, JCALG1, and PE Suite tools by Jeremy Collake\n (c) 2009 Bitsum Technologies and Jeremy Collake\n http://www.bitsum.com\nFFCE,aPLib,and BriefLZ (c)2005 Joergen Ibsen of Ibsen Software\n http://www.ibsensoftware.com.\nElfHash and IsDebuggerPresent plug-ins and more by BoB of Team PEID\n http://peid.info/BobSoft/\nLZMA (c)2007 Igor Pavlov http://www.lzma.org"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_COLUMN_RATIO        "Ratio"
+    IDS_PROJECT_BROWSE_TITLE "Please select the project file ..."
+    IDS_WATERMARK_BROWSE_TITLE 
+                            "Select the file whose watermark you wish to retrieve ..."
+    IDS_FIND_EXE_TITLE      "Please select an executable that loads this module ..."
+    IDS_NO_FILES_SELECTED   "No files are selected."
+    IDS_MESSAGEBOX_CAPTION  "PECompact"
+    IDS_ERROR_LAUNCHING_PEWATERMARK "Error invoking PEWatermark.exe."
+    IDS_BACKUP_OF           "Backup of %s could not be restored."
+    IDS_LAUNCHED            "Error launching: %s.\n\nWould you like to replace this file with its backup (original)?"
+    IDS_CAPTION_TEST_RESULT "Module Test Result"
+    IDS_DID_WORK_OK         "Did %s run ok?"
+    IDS_COMPRESS_AGAIN      "The file %s has already been compressed. Compress again?"
+    IDS_WATERMARK_ERROR     "There was an error watermarking the file: %s."
+    IDS_ERROR_LOADING_PROJECT "Error loading project."
+    IDS_INPROGRESS          "Compression is in progress, are you sure you wish to exit?"
+    IDS_RESOURCE_MODULE_ERROR "Error loading resource module pec2rsrc_*.dll"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ERROR_STORING_PROJECT "Error storing project."
+    IDS_COLUMN_ID           "TypeId"
+    IDS_COLUMN_NAME         "TypeName"
+    IDS_SUPER_COMPRESS_WARNING 
+                            "Some of these options may not be the best choice for your needs, even though they may result in a slightly smaller end executable size. Compressed size isn't all that's important, especially when the difference is so negligible. Are you sure you want to toggle these options?"
+    IDS_COLUMN_LV_INDEX     "Index"
+    IDS_COLUMN_LV_NAME      "Name"
+    IDS_COLUMN_LV_TYPE      "Type"
+    IDS_COLUMN_LV_VALUE     "Value"
+    IDS_PROJECT_NOT_COMPATIBLE 
+                            "I'm sorry, but this old project is not compatible with the latest file format. You must recreate it."
+    IDS_GLOBAL_SETTINGS_WARNING 
+                            "WARNING: There are no items selected. You are setting default options. These options will NOT be applied to files already in the list view, only to files added after adjusting these default options. Please select files you wish to set options for if you wish to change how currently listed files are compressed."
+    IDS_WAITING_FOR_TERMINATION "Waiting for %s to terminate ..."
+    IDS_REGISTERED          "Retail build"
+    IDS_TRIALDAYS           "%d trial days remain"
+    IDS_STUDENT             "Student build"
+    IDS_XLATCREDIT          "English resources. (Native build language, no translation)."
+    IDS_ORDER               "Order"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_KEEP_ED_YOU_DID     "You have chosen to preseve this extra-data/overlay already."
+    IDS_OVERLAY_SIZE        "Extra-data/overlay size:"
+    IDS_BYTES               "Bytes"
+    IDS_ED_UNNECESSARY      "This size of this overlay indicates it is likely unnecessary."
+    IDS_INSTALLER_WARNING_LINE_0 
+                            "Some (not all) Installers/Setup/SFX executables can not be compressed and remain functional."
+    IDS_INSTALLER_WARNING_LINE_1 
+                            "This is due to their design (referencing the overlay/extra-data by a constant physical offset)."
+    IDS_SIGNED_WARNING      "WARNING: This file is signed. To compress it you must use the option: 'Allow security directory' (/asd:yes)."
+    IDS_INVALID_PE          "WARNING: This file is not a valid win32 Portable Executable."
+    IDS_COMMAND_LINE        "Console command line:"
+    IDS_PATH                "Path"
+    IDS_TRANSLATION_WARNING "Warning: Non-English translations of the GUI resources may or may not be up to date and therefore may be missing some functionality, or in rare cases behave errantly."
+    IDS_PRODUCT_VERSION     "Product version"
+    IDS_GUI_VERSION         "GUI verison"
+    IDS_INTERNAL_VERSION    "Internal version"
+    IDS_ENGINE_VERSION      "Engine version"
+    IDS_VERSION_CHECK       "v2.76"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_LANG_SWITCH         "You will be prompted for your new language choice when you next start this application."
+    IDS_FILE_WRITE_ERROR    "Error writing to file. (disk full, read-only media, file in use?)"
+    IDS_ERROR_OPENING_FILE  "Error opening file."
+    IDS_BATCH_FILE_SELECT_TITLE "Save as (overwrite) ..."
+    IDS_ERROR_ACCESS        "Error: Access rights."
+    IDS_NO_DOTNET_DLLS      "ERROR: I'm sorry, this software only supports compression of .NET EXEs, not DLLs."
+    IDS_DOTNET_BETA_WARNING "WARNING:  .NET compression support is currently in early alpha development.\n\t Be sure to test your executable well after compresson.\n\t Not recommended for production use."
+    IDS_DOTNET_DISABLED     "ERROR: .NET support disabled this build."
+    IDS_NO_PE64             "ERROR: I'm sorry, this software can not yet compress PE64 (PE+) executables."
+    IDS_ALREADY_PEC2_PACKED "This module is compressed by PECompact."
+    IDS_TL_BETA_WARNING     "WARNING: The 'Truncate Last Section' (/TL:Yes) option is still in beta testing."
+    IDS_ERROR_OPENING_PE    "ERROR: Opening file with write access. Perhaps it is in use or on read-only media?"
+    IDS_LOADER_HOST_NOT_FOUND 
+                            "ERROR: Loader host not found. The slim loader has been removed."
+    IDS_WARNING             "WARNING:"
+    IDS_ED_WARNING          "This module has extra-data (aka overlay) appended to it."
+    IDS_KEEP_ED_HOW_TO      "To preserve this extra-data/overlay, use the settings dialog."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CANCEL              "Cancel"
+    IDS_IGNORE              "Ignore"
+    IDS_RETRY               "Retry"
+    IDS_ABORT               "Abort"
+    IDS_HELP                "Help"
+    IDS_YES                 "Yes"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_NO                  "No"
+    IDS_CONTINUE            "Continue"
+    IDS_DONOTASKAGAIN       "Do not ask me again"
+    IDS_DONOTTELLAGAIN      "Do not tell me again"
+    IDS_DONOTSHOWAGAIN      "Do not show me again"
+    IDS_YESTOALL            "Yes to All"
+    IDS_NOTOALL             "No to All"
+    IDS_TRYAGAIN            "Try Again"
+    IDS_REPORT              "Report"
+    IDS_IGNOREALL           "Ignore All"
+    IDS_SKIP                "Skip"
+    IDS_SKIPALL             "Skip All"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TT_FORCE_IAT_RESTORE 
+                            "Makes the original import directories accessible at runtime. This is necessary for some applications that extend or modify the behavior of other applications through API hooks to interoperate with a compressed module."
+    IDS_TT_TRUNCATELAST     "Indicates that the last section in the module to be truncated to its unaligned size, instead of aligned at the module's file alignment. It will result in slightly smaller modules, up to 511 bytes."
+    IDS_TT_BACKUP           "Indicates a backup should be made prior to compression. The backup is created as *.*.pec2bac."
+    IDS_TT_ALLOWSECURITYDIR "Indicates to allow compression of signed modules even though compression will remove the signature."
+    IDS_TT_ENFORCE_MEMORY_PROTECTION 
+                            "Indicates to enforce at runtime the virtual memory access permissions as defined in the uncompressed module."
+    IDS_TT_KEEPOVERLAY      "Indicates to preserve any extra data found at the end of the module's file, but not defined in the module's headers. This data is not included in the virtual image and is typically used by SFX and installer applications. Linkers sometimes append a small amount of extra-data to aid in debugging."
+    IDS_TT_WINLOADER        "Indicates to keep at least one imported API from each imported module in the new import directory. This will result in Windows loading imported modules instead of the PECompact loader. For some applications this option is necessary, but it also increases and executable size. Therefore, it is best to leave this option set to 'Auto'."
+    IDS_TT_SKIPSHARED       "Indicates to skip compression of shared sections instead of unsharing them in order to compress."
+    IDS_TT_STRIPUNUSED      "This option indicates whether or not to strip unused (deprecated) resources. Under some situation trash resources can be left in executables. This is rare anymore from modern linkers. Currently this option is not used."
+    IDS_TT_STRIPFIXUPS      "This option indicates whether or not to strip fixups/relocations. By default, all relocations are preserved for DLLs, and for EXEs with randomized image basing."
+    IDS_TT_CODEINTEGRITYCHECK 
+                            "Indicates to skip a quick runtime code integrity check. Turning this off results in smaller executables and slightly faster load time."
+    IDS_TT_COMPRESS_SAFE    "Indicates to compress all resources that are safe to compress. Turning this option off will mean that no resources are compressed. If you need to disable compression of specific resource types, it is best to use the resource type selection below."
+    IDS_TT_COMPRESS_EXPORTS "Indicates to compress the export directory. This should be left on 'Auto'."
+    IDS_TT_MULTICOMPRESS    "Indicates to compress even if the module is already compressed. This will grow the module instead of shrink."
+    IDS_TT_AUTO_CHOOSE_CODEC 
+                            "Indicates to choose the probable best codec to use based on file size."
+    IDS_TT_DECODERTYPE      "Fast decoders are slightly larger, but decompress faster. Small decoders are slightly smaller, but decompress slower. It is best to leave this option set to 'Auto' for automated selection of the appropriate one."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TT_SLIDER_COMPLEVEL "A lower compression level means faster, but less compression. A higher compression level means slower, but better compression. Decompression speed is not generally affected."
+    IDS_TT_RESTORE_DEFAULTS "Restore default settings. If you have any troubles, we recommend using this option to reset the options to their default values. The default option settings have the least chance of problems."
+    IDS_TT_MAKEDEFAULT      "Make these options the default for any file added to the GUI's listview. These defaults do not apply to the console version of this software."
+    IDS_TT_HOOKS            "Press to choose API hook plug-ins to apply to compressed modules."
+    IDS_TT_CODECS           "Press to choose CODEC plug-ins to use and adjust ordering."
+    IDS_WL_SHOULD_MANDATE_WARNING 
+                            "WARNING: This module should NOT have 'Use Windows Module Loader' turned on. Suggested setting is 'Auto'."
+    IDS_TT_TRIM_MEMORY      "Indicates to trim the working set size after decompression. This essentially forces all pages out of physical memory, to be paged back in as they are referenced. Normally, its best to let the Windows VMM page out unused pages as time passes."
+    IDS_TT_SUPER_COMPRESS   "Set a few options ideal for maximum compression. Some other options may need to be manually tweaked to achieve the absolute best compression for your particular module. However, it is often best to leave the settings default and not try to squeeze out a handful of bytes by reconfiguring."
+    IDS_TT_MAX_DECOMPRESS   "Set a few options ideal for maximum decompression speed. Some other options may need to be manually adjusted."
+    IDS_COLUMN_TYPE         "Type"
+    IDS_TYPE_NETDLL         ".NET DLL"
+    IDS_TYPE_NETEXE         ".NET"
+    IDS_TYPE_PE64DLL        "PE+ DLL"
+    IDS_TYPE_PE64EXE        "PE+"
+    IDS_TYPE_PE32DLL        "PE DLL"
+    IDS_TYPE_PE32EXE        "PE"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TYPE_UNSUPPORTED    "Unsupported"
+    IDS_ALREADY_PACKED_UPX  "This module is compressed by UPX."
+    IDS_ALREADY_PACKED_UNKNOWN 
+                            "This module is compressed by an unidentified executable packer."
+    IDS_TT_STRIP_DEBUG_DIRECTORY 
+                            "This option indicates whether or not to strip any debug information found in the executable. If set turned OFF debug information will be preserved in an uncompressed area of the executable and readable by a debugger like Visual Studio."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_OK                  "&Ok"
+    IDS_DOWNLOAD            "&Download"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_EXIT                "&Exit"
+    IDS_DIALOG_CAPTION      "Product Update"
+    IDS_GO                  "&Go"
+    IDS_CTL_YOURPRODUCTVERSION "Your product version"
+    IDS_CTL_NEWPRODUCTVERSION "New product version"
+    IDS_CTL_CANCEL          "&Cancel"
+    IDS_UPDATE_PROCESS_INFO "The update process simply checks to see if a newer version is available. No data is sent in this process other than the HTTP request."
+    IDS_CTL_STATUS          "&Status"
+    IDS_CTL_CHANGES         "C&hanges"
+    IDS_AUTO_CHECKBOX_TEXT  "Automatically check periodically and notify me if an update is available"
+    IDS_NEVER_CHECK_TEXT    "Don't check for updates again"
+    IDS_INCLUDE_BETAS_TEXT  "Include beta versions"
+    IDS_ALWAYS_AUTO         "Automatically check for updates"
+    IDS_UPDATE_OPTIONS      "Update Options"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_UC_OK               "Everything ok."
+    IDS_UPDATE_AVAILABLE    "A product update is available!"
+    IDS_UPDATE_UNAVAILABLE  "A product update is not available at this time."
+    IDS_ERROR_THREAD_NOT_RUNNING "No update check is in progress."
+    IDS_ERROR_CANCELLED     "Operation cancelled."
+    IDS_ERROR_CONNECT_GENERAL "Error connecting to server. Try again later."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CONNECT_START       "Establishing connection with web server..."
+    IDS_CONNECT_COMPLETE    "Connection established with web server."
+    IDS_STEP_DOWNLOAD_START "Starting to download update information ..."
+    IDS_STEP_DOWNLOAD_PROGRESS "Download proceeding ..."
+    IDS_STEP_DOWNLOAD_COMPLETE "Download complete!"
+    IDS_SHOULDEXIT          "The user is downloading the product update..."
+    IDS_WAITING             "Waiting for user input.."
+END
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_OPTIONS DIALOGEX 0, 0, 436, 358
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Settings"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,327,338,50,14
+    GROUPBOX        "General Options",IDC_STATIC,7,48,207,216
+    CONTROL         "Compress exports",IDC_COMPRESS_EXPORTS,"Button",BS_AUTO3STATE | WS_TABSTOP,16,83,188,10
+    CONTROL         "Strip fixups",IDC_STRIP_FIXUPS,"Button",BS_AUTO3STATE | WS_TABSTOP,16,163,188,10
+    CONTROL         "Backup before compression",IDC_BACKUP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,73,188,10
+    LTEXT           "Compression Level:",IDC_STATIC,12,306,63,8
+    CONTROL         "",IDC_SLIDERCOMPLEVEL,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,78,306,100,9
+    GROUPBOX        "Action",IDC_STATIC,7,7,207,37
+    CONTROL         "Compress",IDC_COMPRESS,"Button",BS_AUTORADIOBUTTON,16,19,68,10
+    CONTROL         "Trim only",IDC_TRIM,"Button",BS_AUTORADIOBUTTON,16,28,72,11
+    CONTROL         "Embed watermark:",IDC_WATERMARK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,95,18,114,10
+    EDITTEXT        IDC_MARK,103,28,63,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Static",IDC_COMPLEVEL,184,307,19,8
+    CONTROL         "Preserve overlay / extra-data <-- Use this for SFXs",IDC_KEEPOVERLAY,
+                    "Button",BS_AUTO3STATE | WS_TABSTOP,16,123,197,10
+    CONTROL         138,IDC_OVERLAYBITMAP,"Static",SS_BITMAP,129,52,84,12
+    CONTROL         "Strip unused resources",IDC_STRIPUNUSEDRESOURCES,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,173,188,10
+    GROUPBOX        "Plug-ins",IDC_STATIC,223,7,208,245
+    CONTROL         "Make these settings default",IDC_MAKEDEFAULT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,6,342,138,8
+    LTEXT           "Loader:",IDC_STATIC,229,25,24,10
+    COMBOBOX        IDC_COMBOLOADER,259,23,161,102,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Author:",IDC_STATIC,229,52,60,8
+    RTEXT           "Name:",IDC_STATIC,229,40,60,8
+    LTEXT           " static",IDC_LOADER_AUTHOR,293,52,129,8
+    LTEXT           " static",IDC_LOADER_NAME,293,40,129,8
+    CONTROL         "Allow multiple compressions",IDC_MULTICOMPRESS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,63,100,10
+    PUSHBUTTON      "Restore factory defaults",IDC_RESTORE_DEFAULTS,154,338,128,14
+    PUSHBUTTON      "Select CODEC(s) to use",IDC_CODECS,246,138,162,12
+    CONTROL         "",IDC_CODECLIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,229,91,191,45
+    CONTROL         "Compress resources that can be safely compressed",IDC_COMPRESS_RESOURCES,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,93,188,10
+    GROUPBOX        "Global decoder options",IDC_STATIC,6,270,208,61
+    CONTROL         "Skip shared sections",IDC_SKIPSHARED,"Button",BS_AUTO3STATE | WS_TABSTOP,16,143,188,10
+    CONTROL         "",IDC_HOOKLIST,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,229,190,192,41
+    PUSHBUTTON      "Select API hook plug-ins",IDC_HOOKS,246,235,162,12
+    CONTROL         "Perform code integrity check",IDC_CODEINTEGRITYCHECK,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,113,188,10
+    DEFPUSHBUTTON   "OK",IDOK,381,338,50,14
+    CONTROL         "Use fast decoders (instead of small)",IDC_DECODER_TYPE,
+                    "Button",BS_AUTO3STATE | WS_TABSTOP,12,288,191,10
+    PUSHBUTTON      "Loader options",IDC_LOADERVARIABLES,331,61,84,11,NOT WS_VISIBLE
+    CONTROL         "Enforce memory protection",IDC_ENFORCE_MEMORY_PROTECTION,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,103,188,10
+    CONTROL         "Automatically choose",IDC_AUTO_CHOOSE_CODEC,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,337,79,84,9
+    CONTROL         "Use Windows DLL loader",IDC_WINLOADER,"Button",BS_AUTO3STATE | WS_TABSTOP,16,203,188,10
+    CTEXT           "FFCE has good comp. ratio and fast decompression.\nLZMA has better comp. ratio but slower decompression.",IDC_STATIC,228,154,192,18
+    LTEXT           "CODEC plug-ins in use:",IDC_STATIC,229,79,102,8
+    LTEXT           "API hook plug-ins in use:",IDC_STATIC,229,180,192,8
+    GROUPBOX        "Resources to compress (checked)",IDC_STATIC,223,258,206,72
+    CONTROL         "",IDC_LISTRESOURCES,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,234,270,186,54
+    CONTROL         "Truncate last section to unaligned size",IDC_TRUNCATELAST,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,193,188,10
+    PUSHBUTTON      "Set options to max compression ",IDC_SUPER_COMPRESS,30,223,162,12
+    PUSHBUTTON      "Set options to max decompression speed",IDC_MAX_DECOMPRESSION_SPEED,30,237,162,12
+    CONTROL         "Restore import directory at runtime",IDC_FORCE_IAT_RESTORE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,133,178,10
+    CONTROL         "Trim virtual memory after decompression",IDC_TRIM_MEMORY,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,183,186,10
+    CONTROL         "Strip debug data directory",IDC_STRIP_DEBUG_DIRECTORY,
+                    "Button",BS_AUTO3STATE | WS_TABSTOP,16,153,103,10
+END
+
+IDD_CODECS DIALOGEX 0, 0, 322, 222
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "CODEC Selection Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,268,198,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,216,198,50,14
+    COMBOBOX        IDC_CODECCOMBO,7,26,119,135,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Available CODECs:",IDC_STATIC,7,3,117,23
+    PUSHBUTTON      "Add",IDC_ADD,140,28,50,14
+    PUSHBUTTON      "Remove",IDC_REMOVE,140,47,50,14
+    LTEXT           "CODECs to utilize (in order of use):",IDC_STATIC,198,3,117,23
+    CONTROL         "",IDC_CODECLIST,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,196,27,119,121
+    GROUPBOX        "Selected CODEC Information",IDC_STATIC,7,55,125,125
+    LTEXT           "Author:",IDC_STATIC,12,114,108,11
+    LTEXT           "",IDC_CODEC_AUTHOR,12,126,114,30
+    LTEXT           "Name:",IDC_STATIC,12,66,111,8
+    LTEXT           "",IDC_CODEC_NAME,12,78,116,24
+    PUSHBUTTON      "Settings",IDC_CODEC_SETTINGS,84,162,38,14,WS_DISABLED
+    LTEXT           "FFCE has good comp. ratio and fast decompression.\nLZMA has better comp. ratio but slower decompression.",IDC_STATIC,6,196,202,18
+    LTEXT           "Suggestions:",IDC_STATIC,6,186,185,8
+END
+
+IDD_HOOKS DIALOGEX 0, 0, 322, 178
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "API Hooks Plug-in Selection Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,265,157,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,207,157,50,14
+    COMBOBOX        IDC_HOOKCOMBO,7,20,119,135,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Available API hook plug-ins:",IDC_STATIC,7,3,133,14
+    PUSHBUTTON      "Add",IDC_ADD,140,20,50,14
+    PUSHBUTTON      "Remove",IDC_REMOVE,140,39,50,14
+    LTEXT           "API Hooks to use (in order of use):",IDC_STATIC,198,3,117,14
+    CONTROL         "",IDC_HOOKLIST,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,196,19,119,129
+    GROUPBOX        "Selected API hook plug-in info:",IDC_STATIC,7,42,125,129
+    LTEXT           "Author:",IDC_STATIC,11,124,29,10
+    LTEXT           "Static",IDC_HOOK_AUTHOR,44,124,84,17
+    LTEXT           "Name:",IDC_STATIC,11,57,23,9
+    LTEXT           "Static",IDC_HOOK_NAME,44,58,84,60
+    PUSHBUTTON      "Settings",IDC_CODEC_SETTINGS,11,148,116,14,WS_DISABLED
+END
+
+IDD_LOADER_VARIABLES DIALOGEX 0, 0, 384, 191
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Loader Variables"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,327,170,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,270,170,50,14
+    CONTROL         "",IDC_VARIABLES_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,7,7,370,90
+    LTEXT           "Selected variable description:",IDC_STATIC,12,102,348,8
+    LTEXT           "No variable selected.",IDC_VARIABLE_DESCRIPTION,12,114,360,26
+    LTEXT           "New value:",IDC_STATIC,7,148,37,8
+    EDITTEXT        IDC_VARIABLE_VALUE,50,144,237,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Update Value",IDC_UPDATE_VALUE,296,144,82,12
+END
+
+IDD_LANG_SELECT DIALOGEX 0, 0, 128, 154
+STYLE DS_SYSMODAL | DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Choose Language"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,71,133,50,14
+    PUSHBUTTON      "Cancel",IDC_CANCEL,7,133,50,14
+    LISTBOX         IDC_LANGUAGELIST,7,7,114,121,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 429
+        VERTGUIDE, 16
+        VERTGUIDE, 213
+        VERTGUIDE, 222
+        VERTGUIDE, 228
+        VERTGUIDE, 234
+        VERTGUIDE, 420
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 352
+        HORZGUIDE, 183
+        HORZGUIDE, 263
+        HORZGUIDE, 291
+        HORZGUIDE, 326
+        HORZGUIDE, 334
+    END
+
+    IDD_CODECS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 315
+        VERTGUIDE, 15
+        VERTGUIDE, 140
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 215
+        HORZGUIDE, 26
+        HORZGUIDE, 148
+    END
+
+    IDD_HOOKS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 315
+        VERTGUIDE, 11
+        VERTGUIDE, 140
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 171
+        HORZGUIDE, 148
+    END
+
+    IDD_LOADER_VARIABLES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 377
+        VERTGUIDE, 15
+        VERTGUIDE, 178
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 184
+        HORZGUIDE, 148
+    END
+
+    IDD_LANG_SELECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 121
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_PEC2GUI MENU 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "Browse for files ...",        IDM_BROWSE
+        MENUITEM SEPARATOR
+        MENUITEM "Compress selected files",     IDM_COMPRESS
+        MENUITEM SEPARATOR
+        MENUITEM "Change settings of selected files", IDM_SETTINGS
+        MENUITEM SEPARATOR
+        MENUITEM "Run (test) selected files",   IDM_TEST
+        MENUITEM "Restore backup(s) of selected files", IDM_RESTORE_BACKUP
+        MENUITEM SEPARATOR
+        MENUITEM "Retrieve watermarks of selected files", IDM_GETWATERMARK
+        MENUITEM SEPARATOR
+        MENUITEM "Create batch file (.BAT) to compress selected files", IDM_BATCHFILE
+        MENUITEM SEPARATOR
+        MENUITEM "Remove selected files",       IDM_REMOVE
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "Project"
+    BEGIN
+        MENUITEM "Load project",                IDM_LOAD
+        MENUITEM "Save project",                IDM_SAVE
+        MENUITEM "Save project as ...",         IDM_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Export project to batch file", IDM_BATCHFILE
+    END
+    POPUP "Help"
+    BEGIN
+        MENUITEM "Check for updates",           IDM_UPDATE
+        MENUITEM "Visit Bitsum Technologies on-line", IDM_VISIT
+        MENUITEM SEPARATOR
+        MENUITEM "Switch language",             IDM_LANG
+        MENUITEM SEPARATOR
+        MENUITEM "View documentation (CHM)",    IDM_DOCS2
+        MENUITEM SEPARATOR
+        MENUITEM "About PECompact",             IDM_ABOUT
+    END
+END
+
+IDR_ITEMRCLICK MENU 
+BEGIN
+    POPUP "Right-click item menu"
+    BEGIN
+        MENUITEM "Compress selected items",     IDM_COMPRESS
+        MENUITEM SEPARATOR
+        MENUITEM "Run (test) selected items",   IDM_RUN_SELECTED
+        MENUITEM "Restore backup(s) of selected items ", IDM_RESTORE_BACKUP
+        MENUITEM "Remove selected items",       IDM_DELETE_SELECTED
+        MENUITEM SEPARATOR
+        MENUITEM "Retrieve watermark of selected items", IDM_GETWATERMARKOFSELECTED
+        MENUITEM SEPARATOR
+        MENUITEM "Create batch file to compress selected items", IDM_BATCHFILE
+        MENUITEM "Copy console command line for selected items to clipboard", IDM_COPYCOMMANDLINE, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Change settings/options of selected items", IDM_SETTINGS
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_OVERLAY             BITMAP                  "bitmap1.bmp"
+IDB_BITMAP1             BITMAP                  "packedby_small3.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON                    "pec2.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 3,0,2,0
+ PRODUCTVERSION 3,0,2,0
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "PECompact resources"
+            VALUE "FileVersion", "3, 0, 2, 0"
+            VALUE "InternalName", "pec2rsrc"
+            VALUE "LegalCopyright", "Copyright (C) 2009 Jeremy Collake of Bitsum Technologies"
+            VALUE "OriginalFilename", "pec2rsrc.dll"
+            VALUE "ProductName", "PECompact"
+            VALUE "ProductVersion", "3, 0, 2, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
