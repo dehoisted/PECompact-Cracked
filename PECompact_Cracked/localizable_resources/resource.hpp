@@ -1,7 +1,8 @@
-//{{NO_DEPENDENCIES}}
+//{{NO_DEPENDENCIES}} C++
 // Microsoft Visual C++ generated include file.
 // Used by pec2rsrc.rc
 //
+extern "C" {
 #define IDOK2                           2
 #define IDC_RESTORE_DEFAULTS            3
 #define IDS_OK                          14
@@ -285,3 +286,4 @@
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif
+}
