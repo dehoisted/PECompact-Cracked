@@ -1,18 +1,19 @@
 # PECompact-Cracked
-PECompact Cracked - Command Line &amp; GUI Tool (NO TRIAL)                                                                                                      
-To use, download the ZIP file or release here.                                                                                                                  
-Then run "PECompact_Gui_Cracked.exe" (GUI) or "PEC2.exe" (command line tool) to use PECompact Cracked.                                                                         
-Documentation for PECompact itself can be found in "PEC2.CHM" (compiled HTML help file)                                                                           
+PECompact Cracked - Command Line &amp; GUI Tool (NO TRIAL) 
+
+To use, download the ZIP file of this repository, then extract it.                                                                                                                  
+Then find & run "PECompact_Gui_Cracked.exe" (GUI) or "PEC2.exe" (command line tool) to use PECompact Cracked.                                                                                                                                                    
 Don't remove or rename any files in the main directory.    
 
 ### Notes
-All cracked by me, no one else, although there are most likely other cracked versions out there.                                                                                                                                  
+All cracked by me, no one else, although there are most likely other cracked versions out there.                                                               
+Documentation for PECompact itself can be found in "PEC2.CHM" (compiled HTML help file)
 Lastly, this software is old, so newer executables or DLL's may fail at being compressed.
 
 ## About PECompact
 [PECompact](https://bitsum.com/portfolio/pecompact/) is a windows executable (and DLL) compressor.                                                                                                           
 Orginally had a week or so trial to use the software.                                                                                                        
-Was made around 2010, but it has aged well and works fine for most executables.
+Was made around 2010, but it has aged well - compression works fine for most executables.
 
 ### Features
 + Lots of methods & options for compression
